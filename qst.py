@@ -4,13 +4,23 @@ require("nonebot_plugin_alconna")
 
 from nonebot.adapters.onebot.v11 import Bot, Event
 from arclet.alconna import Alconna, Option, Args
-from nonebot_plugin_alconna import Alconna, on_alconna, Match, UniMessage, At
+from nonebot_plugin_alconna import Alconna, on_alconna, Match, UniMessage, At, CommandMeta
+
+usage_string = "qst=\"qwq_set_special_title\" \n 用法: qst <头衔:str> [用户:At]" 
 
 qst_command = on_alconna(
     Alconna(
         [""], 
         "qst", 
-        Args["touxian?", str]["target?", At]
+        Args["touxian?", str]["target?", At],
+        meta=CommandMeta(
+            description="设置群头衔",
+            usage=usage_string,
+            example="qs 这是一个头衔qwq @VincentZyu",
+            author="VincentZyu",
+            fuzzy_match=False,
+            raise_exception=True
+        ),
     )
 )
 
