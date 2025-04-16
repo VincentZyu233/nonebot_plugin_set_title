@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nonebot_plugin_set_title"  # PyPI 上的包名
+version = "0.0.1-alpha"
+description = "修改群头衔"
+authors = ["VincentZyu <1830540513zyu@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "github.com/VincentZyu233/nonebot_plugin_set_title"
+repository = "github.com/VincentZyu233/nonebot_plugin_set_title"
+keywords = ["nonebot", "nonebot2", "plugin"]
+packages = [{ include = "nonebot_plugin_set_title" }]  # 模块名
+
+[tool.poetry.dependencies]
+python = "^3.10.12"
+# nonebot2 = "^2.0.0"
+# nonebot-adapter-onebot = "^2.2.3"  # 根据你使用的适配器添加
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
