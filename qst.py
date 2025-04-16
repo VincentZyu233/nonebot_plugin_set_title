@@ -59,7 +59,7 @@ async def qst_got(
     event: Event
 ):
     # assert touxian
-    if qst_command.get_path_arg("touxian") is not None:
+    if qst_command.get_path_arg("touxian", default=None) is not None:
         return
 
     try:
